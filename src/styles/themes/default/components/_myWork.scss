@@ -1,0 +1,142 @@
+.mywork-conteiner {
+    @include createFlex(column, normal, vertical);
+    padding: $space-zero 7%;
+    margin-bottom: 10%;
+    margin-top: -12%;
+  }
+
+  .mywork_text-wrapper {
+    @include createFlex(column, normal, vertical);
+    width: $wrapper;
+    margin-left: 6%;
+    font-size: pxToRem(30);
+  }
+  
+  .mywork_baner-wrapper {
+    position: relative;
+    z-index: 2;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin-left: 1%;
+  }
+
+  .baner_img-logotype,
+  .baner_img-office,
+  .baner_img-shop,
+  .baner_img-ecourse,
+  .baner_img-explore,
+  .baner_img-sushi {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    width: $wrapper-full;
+    height: $wrapper-xxl;
+  }
+  
+  .baner_img {
+    width: $wrapper-full;
+    height: auto;
+  }
+
+  .mywork_baner-element {
+    background-color: $c-white;
+    @include createFlex(column, normal, vertical);
+    width: 27%;
+    @include boxShadow(3px 3px 6px rgba(0, 0, 0, 0.23));
+    border-radius: 5px;
+    padding: 1%;
+    margin-top: 1%;
+  }
+  
+  .mywork_lastbaner-element {
+    position: relative;
+    z-index: 2;
+    @include createFlex(column, normal, vertical);
+    width: 27%;
+    @include boxShadow(3px 3px 6px rgba(0, 0, 0, 0.23));
+    border-radius: 5px;
+    padding: 1%;
+    margin-top: 1%;
+    background-color: rgba(236, 196, 164, 0.7);
+  }
+  
+  .myworks_circle-element {
+    background-image: url("../../../../assets/koła_01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+    width: 40%;
+    height: 40em;
+    margin-left: 55%;
+    margin-top: -50%;
+  }
+
+  @media (max-width: 768px) {
+  
+    .aboutme_main-conteiner {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .about_main-wrapper {
+      width: $wrapper-full;
+      margin-right: 8%;
+    }
+    .skills_main-wrapper {
+      width: $wrapper-full;
+    }
+  
+    .mywork_text-wrapper {
+      width: $wrapper-full;
+      margin-left: 6%;
+    }
+  
+    .about_main-title {
+      margin-top: 15%;
+    }
+
+    .myworks_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+  
+    .easy_code-btn{
+      display: none;
+      visibility: hidden;
+    }
+}
+  
+  @media (max-width: $break-mobile) {
+  
+    .mywork-conteiner {
+      margin-top: 1%;
+    }
+  
+    .description_data-info {
+      width: $wrapper-full;
+    }
+  
+    .left_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+  
+    .right_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+  
+    .main_section-introduce {
+      width: 150%;
+    }
+
+    .myworks_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+  }
+

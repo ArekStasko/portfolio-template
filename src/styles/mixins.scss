@@ -1,0 +1,33 @@
+@function pxToRem($pxsize, $rembase: 16) {
+    @return ($pxsize / $rembase) + rem;
+}
+
+@mixin boxShadow($arg) {
+   -webkit-box-shadow: $arg;
+   box-shadow: $arg;
+}
+
+@mixin myFlex(){
+    $prefixes: (-webkit-box, -ms-flexbox, -webkit-flex, flex);
+        @each $prefix in $prefixes {
+            display: $prefix;
+        }
+}
+
+@mixin createFlex(
+    $flexDirection: false,
+    $boxD: false,
+    $boxO: false,
+    $flexB: false
+) {
+    @if $flexDirection {
+        -webkit-box-orient: $boxO;
+        -webkit-box-direction: $boxD;
+        -ms-flex-direction: $flexDirection;
+        flex-direction: $flexDirection;
+    }
+    @if $flexB{
+        -ms-flex-preferred-size: $flexB;
+        flex-basis: $flexB;
+    }
+}

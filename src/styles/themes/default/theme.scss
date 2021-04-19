@@ -1,0 +1,15 @@
+@import '../../variables';
+@import '../../fonts';
+@import '../../global';
+@import '../../mixins';
+
+/* import components styles */
+
+@import './components/section';
+@import './components/aboutMe';
+@import './components/blogPosts';
+@import './components/contact';
+@import './components/myWork';
+@import './components/navbar';
+@import './components/tools';
+

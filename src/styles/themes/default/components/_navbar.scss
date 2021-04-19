@@ -1,0 +1,188 @@
+.navbar_main-wrapper {
+    top: $space-zero;
+    position: fixed;
+    z-index: 200;
+    width: $wrapper-full;
+    background-color: $c-grayNickel-opacity;
+    @include boxShadow(0px 6px 5px 0px $c-grayNickel-opacity);
+    @include createFlex(inherit, inherit, inherit);
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .navbar_element-wrapper {
+    @include createFlex(inherit, inherit, inherit);
+    background-color: $c-pancho;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: $c-white;
+    width: 53vw;
+    height: 9vh;
+    border-radius: 5px;
+    @include boxShadow(3px 4px 5px 0px rgba(0, 0, 0, 0.3));
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .navbar_main-text {
+    color: rgb(187, 187, 187);
+    font-size: 4em;
+    font-weight: $f-weight-xl;
+    margin-left: 5%;
+  }
+  
+  .navbar_link-list {
+    list-style-type: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    li{
+      cursor: pointer;
+    margin: 7%;
+    font-size: 1em;
+    font-weight: 100;
+    }
+
+    i{
+      cursor: pointer;
+    font-size: 1.5em;
+    margin-right: 1vw;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
+  @media (max-width: 768px) {
+  
+    .navbar_element-wrapper {
+      position: fixed;
+      @include createFlex(column, normal, vertical);
+      color: $c-white;
+      width: 100vw;
+      height: 100vh;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 48em;
+      -webkit-transform: translateX(120%);
+      -ms-transform: translateX(120%);
+      transform: translateX(120%);
+      -webkit-transition: -webkit-transform 0.5s ease-in;
+      transition: -webkit-transform 0.5s ease-in;
+      -o-transition: transform 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+      transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    }
+   
+    .navbar_link-list {
+      @include createFlex(column, normal, vertical);
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .navbar_line-element {
+      background-color: $c-white;
+      width: 80vw;
+      height: 1px;
+      margin-left: 0;
+    }
+  
+    .nav-active {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+  
+    .navbar_burger-element {
+      position: absolute;
+      z-index: 10;
+      margin-left: 70vw;
+    }
+  
+    .navbar_link-list li {
+
+      li{
+        margin-bottom: 30%;
+        font-size: 130%;
+        font-weight: $f-weight-sm;
+      }
+
+      i{
+        font-size: 3em;
+        margin-right: 0;
+        margin-bottom: 100%;
+      }
+    }
+  
+    .navbar_burger-element {
+
+      div{
+        cursor: pointer;
+        width: 30px;
+        height: 4px;
+        background-color: $c-white;
+        margin: 7px;
+        border-radius: 10px;
+      }
+    }
+}
+  
+  @media (max-width: $break-mobile) {
+  
+    .navbar_main-wrapper {
+      height: 100px;
+    }
+  
+    .navbar_link-list {
+
+      li{
+        margin: 5%;
+        font-size: 80%;
+        font-weight: $f-weight-sm;
+      }
+      i{
+        font-size: 1.5em;
+        margin-right: 1.5vw;
+      }
+    }
+  }
+  @media (min-width: $break-laptop) {
+  
+    .navbar_link-list{
+      li{
+        margin: 5%;
+        font-size: 100%;
+        font-weight: $f-weight-sm;
+      }
+
+      i{
+        font-size: 1.7em;
+        margin-right: 1.8vw;
+      }
+    }
+  }
+  
+  @media (min-width: $break-high) {
+    .navbar_link-list{
+
+      li{
+      margin: 5%;
+      font-size: 130%;
+      font-weight: $f-weight-sm;
+      }
+
+      i{
+        font-size: 1.9em;
+      margin-right: 1.8vw;
+      }
+    }
+  }

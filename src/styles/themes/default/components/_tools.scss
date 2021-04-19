@@ -1,0 +1,197 @@
+.tools_main-container {
+    background-color: $c-pancho-opacity;
+    @include createFlex(column, normal, vertical);
+    padding: $space-zero 2%;
+    margin-top: 5%;
+    height: 20em;
+  }
+
+  .tools_header-wrapper {
+    margin-left: 10%;
+    font-size: pxToRem(30);
+
+    h2{
+      font-weight: $f-weight-md;
+      margin: $space-zero;
+    }
+  }
+  
+  .tools_elements-wrapper {
+    margin-top: 2%;
+    @include createFlex(row, normal, horizontal);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 21%;
+  }
+
+  .tools_element-redux,
+  .tools_element-program,
+  .tools_element-flexbox,
+  .tools_element-styledComponents,
+  .tools_element-express,
+  .tools_element-webpack,
+  .tools_element-react {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    width: $wrapper;
+    height: 4vh;
+  }
+  
+  .tools_element-react {
+    background-image: url("../../../../assets/react.png");
+  }
+  
+  .tools_element-webpack {
+    background-image: url("../../../../assets/webpack.png");
+  }
+  
+  .tools_element-express {
+    background-image: url("../../../../assets/nodejs.png");
+  }
+  
+  .tools_element-styledComponents {
+    background-image: url("../../../../assets/styled components.png");
+  }
+  
+  .tools_element-redux {
+    background-image: url("../../../../assets/redux.png");
+  }
+  
+  .tools_element-flexbox {
+    background-image: url("../../../../assets/flexbox.png");
+  }
+  
+  .tools_element-program {
+    background-image: url("../../../../assets/program.png");
+  }
+
+  .tools_main-subtitle {
+    color: $c-desertSand;
+  }
+  
+  .navbar_line-element {
+    background-color: $c-white;
+    width: 0.13vw;
+    height: 7vh;
+    margin-left: 10%;
+  }
+
+  .tools_element {
+    @include createFlex(column, normal, vertical);
+    background-color: $c-white;
+    @include boxShadow(3px 3px 6px rgba(0, 0, 0, 0.23));
+    border-radius: 5px;
+    padding: 1%;
+    width: 90px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-left: 1%;
+
+    :hover{
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+    }
+
+    p{
+      font-weight: 100;
+    font-size: 100%;
+    margin: $space-zero;
+    text-align: center;
+    }
+
+    img{
+      width: $wrapper-m;
+    margin-bottom: 5px;
+    }
+  }
+  
+  .tools_circle-element {
+    background-image: url("../../../../assets/koła_01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+    width: 26%;
+    height: 550px;
+    margin-left: 70%;
+    margin-top: -14%;
+  }
+  
+  .toolsLeft_circle-element {
+    background-image: url("../../../../assets/koła_03.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 35%;
+    top: 140%;
+    height: 60vh;
+    left: -20%;
+    margin: $space-zero;
+  }
+
+
+
+  @media (max-width: 768px) {
+  
+    .tools_element{
+
+      div{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  
+    .tools_elements-wrapper{
+      margin: 0;
+    }
+  
+    .tools_element {
+      margin: 1%;
+    }
+
+    .tools_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+  }
+  
+  
+  @media (max-width: $break-mobile) {
+
+    .tools_main-container {
+      height: 390px;
+    }
+  
+    .tools_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+
+    .tools_element {
+      margin: 1%;
+    }
+  }
+  @media (min-width: $break-laptop) {
+    .tools_circle-element {
+      height: 50;
+    }
+  } 
+    
+ 
+
+
+
+  

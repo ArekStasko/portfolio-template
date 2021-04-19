@@ -1,0 +1,173 @@
+.aboutme_main-conteiner {
+    margin-top: -9%;
+    padding: $space-zero 13%;
+    -ms--pack: distribute;
+    justify-content: space-around;
+  }
+
+  .about_main-wrapper {
+    @include createFlex(column, normal, vertical);
+    width: $wrapper;
+    margin-right: 8%;
+  }
+
+  .skills_main-wrapper {
+    margin-right: -7%;
+    margin-top: -2%;
+    border-radius: 10px;
+    padding-left: 7%;
+    padding-top: 4%;
+    width: $wrapper-m;
+    height: 40em;
+    @include boxShadow(3px 3px 6px rgba(0, 0, 0, 0.23));
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+
+  .statistics_main-wrapper {
+    @include createFlex(column, normal, vertical);
+
+    div{
+      width: $wrapper-xl;
+      background-color: $c-white;
+      border-radius: 5px;
+      margin-top: 3%;
+      font-weight: 100;
+      height: 40px;
+
+      .statistics_60{
+        width: $wrapper-m;
+      }
+
+      .statistics_90 {
+        width: $wrapper-xxl;
+      }
+
+      .statistics_100 {
+        width: 98%;
+      }
+
+    span {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      padding: 1%;
+      height: 36px;
+      background-color: $c-pancho;
+      color: $c-white;
+      @include boxShadow(3px 3px 6px rgba(0, 0, 0, 0.23));
+      border-radius: 5px;
+      font-weight: 100;
+    }
+    }
+  }
+
+  .about_main-title {
+    font-weight: $f-weight-md;
+    margin-bottom: $space-zero;
+    font-size: pxToRem(40);
+  }
+  
+  .about_techy-title {
+    color: $c-pancho;
+    font-weight: $f-weight-md;
+    margin: $space-zero;
+    font-size: pxToRem(40);
+  }
+  
+  .about_techy-description {
+    font-weight: $f-weight-sm;
+    font-size: pxToRem(20);
+  }
+  
+  .about_interests-title {
+    color: $c-pancho;
+    font-weight: $f-weight-md;
+    margin: $space-zero;
+    font-size: pxToRem(40);
+  }
+  
+  .about_interests-list {
+
+    p{
+      list-style-type: none;
+    position: relative;
+    margin: $space-zero;
+    margin-left: -30px;
+    }
+    
+    p::before{
+      content: ".";
+      position: absolute;
+      left: -0.5em;
+      top: -0.4em;
+      font-size: 1.5em;
+    }
+  }
+  
+  .about_btn-text {
+    margin-top: -8%;
+    font-weight: $f-weight-md;
+    font-size: pxToRem(25);
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .skills_main-title {
+    font-weight: $f-weight-md;
+    font-size: pxToRem(40);
+    margin: $space-zero;
+  }
+  .skills_description {
+    font-weight: $f-weight-sm;
+    font-size: pxToRem(25);
+  }
+
+  @media (max-width: 768px) {
+  
+    .aboutme_main-conteiner {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  
+  
+    .about_main-wrapper {
+      width: $wrapper-full;
+      margin-right: 8%;
+    }
+  
+    .mywork_text-wrapper {
+      width: $wrapper-full;
+      margin-left: 6%;
+    }
+  
+    .tools_element {
+      margin: 1%;
+    }
+}
+  
+  @media (max-width: $break-mobile) {
+  
+    .tools_main-container {
+      height: 390px;
+    }
+  
+    .tools_circle-element {
+      visibility: hidden;
+      display: none;
+    }
+  
+    .tools_element {
+      margin: 1%;
+    }
+   
+  }
+  @media (min-width: $break-laptop) {
+    .tools_circle-element {
+      height: 50;
+    }
+  }
